@@ -1,0 +1,107 @@
+* {
+    margin: 0 auto;
+}
+.box {
+    width: 80px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+}
+.sterz {
+    width: 25px;
+    height: 30px;
+    clip-path: polygon(50% 0, 100% 91%, 100% 100%, 0 100%, 0 91%);
+    background-color: black;
+    background: linear-gradient(to right, black, rgb(53, 52, 52), black);
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    
+}
+.small {
+    width: 70px;
+    height: 90px;
+    z-index: 0;
+    clip-path: polygon(50% 0, 100% 91%, 100% 100%, 0 100%, 0 91%);
+    position: absolute;
+    background-color: rgb(175, 131, 64);
+    background: linear-gradient(to right, rgb(175, 131, 64), rgb(219, 202, 154), rgb(175, 131, 64));
+    top: 50px;
+}
+.main {
+    width: 70px;
+    height: 430px;
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+    top: 65px;
+    
+}
+.center {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background-color: rgb(68, 170, 162);
+    z-index: 1;
+    border-radius: 150px 150px 0 0;
+    animation: colors 5s linear infinite;
+    box-shadow: inset 5px 5px 5px 0px #8fcac4;
+    
+} 
+
+@keyframes colors {
+    0% { background-color: red;
+        box-shadow: inset 5px 5px 5px 0px rgb(226, 79, 79);
+    
+    }
+    20% {  background-color: green;
+        box-shadow: inset 5px 5px 5px 0px rgb(79, 226, 116);
+    
+    }
+    40% {  background-color: rgb(217, 255, 0);
+        box-shadow: inset 5px 5px 5px 0px rgb(204, 226, 79);
+    
+    }
+    60% { background-color: rgb(255, 174, 0);
+        box-shadow: inset 5px 5px 5px 0px rgb(226, 199, 79);
+    
+    }
+    80% {  background-color: rgb(4, 193, 250);
+        box-shadow: inset 5px 5px 5px 0px rgb(117, 213, 236);
+    
+    }
+    100% {  background-color: rgb(177, 89, 165);
+        box-shadow: inset 5px 5px 5px 0px rgb(207, 106, 202);
+    
+    }
+}
+.right {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(42, 124, 119);
+    z-index: 1;
+    border-radius: 150px 150px 0 0;
+    box-shadow: inset 5px 2px 5px 0px #8fcac4;
+    animation: colors 5s linear infinite;
+}
+.left {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(42, 124, 119);
+    z-index: 1;
+    border-radius: 150px 150px 0 0;
+    box-shadow: inset -5px 2px 5px 0px #8fcac4;
+    animation: colors 5s linear infinite;
+}
